@@ -1,7 +1,7 @@
 """
 stringjumble.py
 Author: Jeff
-Credit: Me!
+Credit: Google
 
 Assignment:
 
@@ -38,7 +38,7 @@ print("")
 i = tlen
 word = []
 a = 0
-text_l2 = text_l
+text_l2 = list(text_l)
 text_l2.insert(0, " ")
 
 while i >= 0:
@@ -47,7 +47,7 @@ while i >= 0:
         a += 1
     else:
         while a > 0:
-            print(word[-a], end="")
+            print(word[a-1], end="")
             a -= 1
         word = []
         a = 0
@@ -58,12 +58,12 @@ print("")
 i = 0
 word = []
 a = 0
-text_l2 = text_l
-text_l2.append(" ")
+text_l3 = text_l
+text_l3.append(" ")
 
 while i <= tlen:
-    if text_l2[i] != " ":
-        word.append(text_l2[i])
+    if text_l3[i] != " ":
+        word.append(text_l3[i])
         a += 1
     else:
         while a > 0:
