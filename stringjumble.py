@@ -35,26 +35,42 @@ while n1 > 0:
     print(text_l[n1-1], end="")
     n1 -= 1
 print("")
+i = tlen
+word = []
+a = 0
+text_l2 = text_l
+text_l2.insert(0, " ")
+
+while i >= 0:
+    if text_l2[i] != " ":
+        word.append(text_l2[i])
+        a += 1
+    else:
+        while a > 0:
+            print(word[-a], end="")
+            a -= 1
+        word = []
+        a = 0
+        print(" ", end="")
+    i -= 1
+print("")
+
 i = 0
 word = []
 a = 0
 text_l2 = text_l
 text_l2.append(" ")
-word_num = text.count(" ") + 1
-print(word_num)
-print(tlen)
-print(text_l2)
-while i < tlen:
+
+while i <= tlen:
     if text_l2[i] != " ":
         word.append(text_l2[i])
         a += 1
-        print(list(word))
     else:
         while a > 0:
             print(word[a-1], end="")
             a -= 1
         word = []
         a = 0
+        print(" ", end="")
     i += 1
-    
     
