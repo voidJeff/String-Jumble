@@ -38,17 +38,22 @@ print("")
 i = 0
 word = []
 a = 0
+text_l2 = text_l
+text_l2.append(" ")
 word_num = text.count(" ") + 1
 print(word_num)
+print(tlen)
+print(
 while i < tlen:
-    if text_l[i] != " ":
-        word.append(text_l[i])
-        a = i + 1
+    if text_l2[i] != " ":
+        word.append(text_l2[i])
+        a += 1
     else:
+        print(list(word))
         while a > 0:
             print(word[a-1], end="")
             a -= 1
-            word = []
+        word = []
     i += 1
     
     
