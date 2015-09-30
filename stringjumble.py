@@ -46,7 +46,7 @@ while i < tlen:
         a = i + 1
     else:
         while a > 0:
-            print(word[a], end="")
+            print(word[a-1], end="")
             a -= 1
             word = []
     i += 1
