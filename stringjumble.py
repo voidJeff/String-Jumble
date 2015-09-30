@@ -1,6 +1,6 @@
 """
 stringjumble.py
-Author: Eric
+Author: Jeff
 Credit: Me!
 
 Assignment:
@@ -25,3 +25,31 @@ ydnah dnif yam uoy taht skcirt ro seuqinhcet wef a era erehT
 handy find may you that tricks or techniques few a are There
 erehT era a wef seuqinhcet ro skcirt taht uoy yam dnif ydnah
 """
+text = input("Please enter a string of text (the bigger the better): ")
+print('You entered "{0}". Now jumble it:'.format(text))
+text_l = list(text)
+tlen = len(text)
+
+n1 = tlen
+while n1 > 0:
+    print(text_l[n1-1], end="")
+    n1 -= 1
+print("")
+i = 0
+a = 0
+b = 0
+word_num = text.count(" ") + 1
+print(word_num)
+while i < tlen:
+    
+    if text_l[i] != " ":
+        a += 1
+        i += 1
+    else:
+        while b <= a:
+            print(text_l[b], end="")
+            b += 1
+    a = 0
+    i += 1
+    
+    
