@@ -36,20 +36,19 @@ while n1 > 0:
     n1 -= 1
 print("")
 i = 0
+word = []
 a = 0
-b = 0
 word_num = text.count(" ") + 1
 print(word_num)
 while i < tlen:
-    
     if text_l[i] != " ":
-        a += 1
-        i += 1
+        word.append(text_l[i])
+        a = i + 1
     else:
-        while b <= a:
-            print(text_l[b], end="")
-            b += 1
-    a = 0
+        while a > 0:
+            print(word[a], end="")
+            a -= 1
+            word = []
     i += 1
     
     
